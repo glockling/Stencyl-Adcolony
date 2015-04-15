@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<palette>
+        <block tag="load-ad" spec="Start Ad Colony with AppID: %0 and ZoneID: %1" code="AdColony.load(~,~);" type="action" color="gray" returns="void">
+            <fields>
+                <text order="0"></text>
+                <text order="1"></text>
+            </fields>
+        </block>
+        
+        <block tag="play-ad" spec="Play Ad Colony ad with Zone ID: %0" code="AdColony.play(~);" type="action" color="gray" returns="void">
+            <fields>
+                <text order="0"></text>
+            </fields>
+        </block>
+        
+        <block tag="ad-available" spec="Ad with Zone ID: %0 is available" code="AdColony.available(~)" type="normal" color="gray" returns="boolean">
+            <fields>
+                <text order="0"></text>
+            </fields>
+        </block>
+        
+        <block tag="ad-finished" spec="Ad with Zone ID: %0 was closed" code="AdColony.status(~)" type="normal" color="gray" returns="boolean">
+            <fields>
+                <text order="0"></text>
+            </fields>
+        </block>
+        
+        <block tag="ad-showing" spec="Ad with Zone ID: %0 started showing" code="AdColony.showing(~)" type="normal" color="gray" returns="boolean">
+            <fields>
+                <text order="0"></text>
+            </fields>
+        </block>
+
+</palette>
