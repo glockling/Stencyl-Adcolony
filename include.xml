@@ -8,6 +8,8 @@
 
 <project>
     
+    <ndll name="AdColony"/>
+    
     <dependency name="dependencies/ios/AdColony.a" />
     <template path="dependencies/ios/AdColony.a" rename="lib/arm64/AdColony.a" />
     <template path="dependencies/ios/AdColony.a" rename="lib/armv7/AdColony.a" />
@@ -34,6 +36,13 @@
     <dependency name="UIKit.framework" if="ios" />
     <dependency name="Foundation.framework" if="ios" />
     
-
-    <ndll name="AdColony" if="ios"/>
+    <section if="android">
+        <template path="dependencies/android/libs/armeabi/libImmEndpointWarpJ.so" rename="libs/armeabi/libImmEndpointWarpJ.so" />
+        
+        <dependency name="AdColony" path="dependencies/adcolony" />
+        <java path="dependencies/adcolony/libs/adcolony.jar" />
+        <java path="dependencies/adcolony/libs/google-play-services.jar" />
+        <java path="project/android" />
+        <android extension="AdColony" />
+    </section>
 </project>
