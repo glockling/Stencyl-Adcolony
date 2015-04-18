@@ -155,7 +155,6 @@ namespace adcolony{
         NSString * OtherZoneID = AdColonyController.adcolonyZoneID;
         if ([zoneID2 isEqualToString:OtherZoneID]) {
             if (AdColonyController.videoAvailable) {
-                AdColonyController.videoAvailable = NO;
                 return true;
             }
         }

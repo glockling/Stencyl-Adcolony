@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 
 <palette>
-        <block tag="load-ad" spec="Start Ad Colony with AppID: %0 and ZoneID: %1" code="AdColony.load(~,~);" type="action" color="gray" returns="void">
+        <block tag="load-ad" spec="Start Ad Colony with AppID: %0 and ZoneID: %1 For Store: %2 (Non iOS Only, Game Version: %3)" code="AdColony.load(~,~,~,~);" type="action" color="gray" returns="void">
             <fields>
                 <text order="0"></text>
                 <text order="1"></text>
+                <dropdown order="2">
+                    <choices>
+                        <c text="iOS" code="&quot;ios&quot;"></c>
+                        <c text="Android" code="&quot;google&quot;"></c>
+                        <c text="Amazon" code="&quot;amazon&quot;"></c>
+                    </choices>
+                </dropdown>
+                <text order="3"></text>
             </fields>
         </block>
         

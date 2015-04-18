@@ -7,8 +7,20 @@
  -->
 
 <project>
+    <ndll name="AdColony" />
     
-    <ndll name="AdColony"/>
+    <section if="android">
+        
+        <template path="dependencies/android/libs/armeabi/libImmEndpointWarpJ.so" rename="libs/armeabi/libImmEndpointWarpJ.so" />
+        <dependency name="adcolony" path="dependencies/android" />
+        <java path="dependencies/android/libs/adcolony.jar" />
+       <!-- <java path="dependencies/android/libs/google-play-services.jar" /> -->
+        <java path="project/android" />
+        <android extension="AdColony" />
+        
+    </section>
+    
+    <section if="ios">
     
     <dependency name="dependencies/ios/AdColony.a" />
     <template path="dependencies/ios/AdColony.a" rename="lib/arm64/AdColony.a" />
@@ -35,14 +47,5 @@
     <dependency name="WebKit.framework" if="ios" />
     <dependency name="UIKit.framework" if="ios" />
     <dependency name="Foundation.framework" if="ios" />
-    
-    <section if="android">
-        <template path="dependencies/android/libs/armeabi/libImmEndpointWarpJ.so" rename="libs/armeabi/libImmEndpointWarpJ.so" />
-        
-        <dependency name="AdColony" path="dependencies/adcolony" />
-        <java path="dependencies/adcolony/libs/adcolony.jar" />
-        <java path="dependencies/adcolony/libs/google-play-services.jar" />
-        <java path="project/android" />
-        <android extension="AdColony" />
     </section>
 </project>
